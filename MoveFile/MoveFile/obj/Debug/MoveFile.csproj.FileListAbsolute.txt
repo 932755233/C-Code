@@ -1,0 +1,9 @@
+D:\c_test\MoveFile\MoveFile\bin\Debug\MoveFile.exe.config
+D:\c_test\MoveFile\MoveFile\bin\Debug\MoveFile.exe
+D:\c_test\MoveFile\MoveFile\bin\Debug\MoveFile.pdb
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.csprojResolveAssemblyReference.cache
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.Form1.resources
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.Properties.Resources.resources
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.csproj.GenerateResource.Cache
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.exe
+D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.pdb
