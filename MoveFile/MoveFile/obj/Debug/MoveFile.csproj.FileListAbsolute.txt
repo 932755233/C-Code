@@ -7,3 +7,12 @@ D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.Properties.Resources.resources
 D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.csproj.GenerateResource.Cache
 D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.exe
 D:\c_test\MoveFile\MoveFile\obj\Debug\MoveFile.pdb
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.csprojResolveAssemblyReference.cache
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.Form1.resources
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.Properties.Resources.resources
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.csproj.GenerateResource.Cache
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.exe
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Debug\MoveFile.pdb
+D:\GitHub\C-Code\MoveFile\MoveFile\bin\Debug\MoveFile.exe.config
+D:\GitHub\C-Code\MoveFile\MoveFile\bin\Debug\MoveFile.exe
+D:\GitHub\C-Code\MoveFile\MoveFile\bin\Debug\MoveFile.pdb

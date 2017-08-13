@@ -36,23 +36,27 @@ namespace MoveFile
             lvwFiles.Columns.Add("时间", 100);
 
             lvwFiles.View = View.Details;
+
+            pbxPhoto.ImageLocation = @"http://localhost:8080/Pictures/LCN_0579-1.jpg";
+
         }
 
         private void btnInput_Click(object sender, EventArgs e)
         {
+            pbxPhoto.ImageLocation = tbxInput.Text;
 
-            if (!"".Equals(inputStr))
-            {
-                fbdDirectory.SelectedPath = inputStr;
-            }
-            fbdDirectory.Description = "请选择一个输入文件夹";
-            fbdDirectory.ShowNewFolderButton = false;
-            if (fbdDirectory.ShowDialog() == DialogResult.OK)
-            {
-                inputStr = fbdDirectory.SelectedPath;
-                tbxInput.Text = fbdDirectory.SelectedPath;
-                openInput();
-            }
+            //if (!"".Equals(inputStr))
+            //{
+            //    fbdDirectory.SelectedPath = inputStr;
+            //}
+            //fbdDirectory.Description = "请选择一个输入文件夹";
+            //fbdDirectory.ShowNewFolderButton = false;
+            //if (fbdDirectory.ShowDialog() == DialogResult.OK)
+            //{
+            //    inputStr = fbdDirectory.SelectedPath;
+            //    tbxInput.Text = fbdDirectory.SelectedPath;
+            //    openInput();
+            //}
 
 
 
