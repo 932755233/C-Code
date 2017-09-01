@@ -37,14 +37,14 @@
             this.btnMove = new System.Windows.Forms.Button();
             this.fbdDirectory = new System.Windows.Forms.FolderBrowserDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tvwDirectories = new System.Windows.Forms.TreeView();
+            this.lvwFiles = new System.Windows.Forms.ListView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msInput = new System.Windows.Forms.ToolStripMenuItem();
             this.msOutput = new System.Windows.Forms.ToolStripMenuItem();
             this.msSaveSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.msExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tvwDirectories = new System.Windows.Forms.TreeView();
-            this.lvwFiles = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -137,6 +137,27 @@
             this.splitContainer1.SplitterDistance = 125;
             this.splitContainer1.TabIndex = 7;
             // 
+            // tvwDirectories
+            // 
+            this.tvwDirectories.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvwDirectories.Location = new System.Drawing.Point(0, 0);
+            this.tvwDirectories.Name = "tvwDirectories";
+            this.tvwDirectories.Size = new System.Drawing.Size(125, 213);
+            this.tvwDirectories.TabIndex = 0;
+            this.tvwDirectories.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvwDirectories_AfterSelect);
+            // 
+            // lvwFiles
+            // 
+            this.lvwFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwFiles.Location = new System.Drawing.Point(0, 0);
+            this.lvwFiles.Name = "lvwFiles";
+            this.lvwFiles.Size = new System.Drawing.Size(440, 213);
+            this.lvwFiles.TabIndex = 0;
+            this.lvwFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwFiles.View = System.Windows.Forms.View.Details;
+            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
+            this.lvwFiles.Click += new System.EventHandler(this.lvwFiles_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -185,27 +206,6 @@
             this.msExit.Size = new System.Drawing.Size(160, 22);
             this.msExit.Text = "退出";
             this.msExit.Click += new System.EventHandler(this.msExit_Click);
-            // 
-            // tvwDirectories
-            // 
-            this.tvwDirectories.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvwDirectories.Location = new System.Drawing.Point(0, 0);
-            this.tvwDirectories.Name = "tvwDirectories";
-            this.tvwDirectories.Size = new System.Drawing.Size(125, 213);
-            this.tvwDirectories.TabIndex = 0;
-            this.tvwDirectories.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvwDirectories_AfterSelect);
-            // 
-            // lvwFiles
-            // 
-            this.lvwFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvwFiles.Location = new System.Drawing.Point(0, 0);
-            this.lvwFiles.Name = "lvwFiles";
-            this.lvwFiles.Size = new System.Drawing.Size(440, 213);
-            this.lvwFiles.TabIndex = 0;
-            this.lvwFiles.UseCompatibleStateImageBehavior = false;
-            this.lvwFiles.View = System.Windows.Forms.View.Details;
-            this.lvwFiles.SelectedIndexChanged += new System.EventHandler(this.lvwFiles_SelectedIndexChanged);
-            this.lvwFiles.Click += new System.EventHandler(this.lvwFiles_Click);
             // 
             // Form1
             // 

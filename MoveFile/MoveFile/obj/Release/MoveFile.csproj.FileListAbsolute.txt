@@ -6,3 +6,5 @@ D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.Properties.Resources.res
 D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.csproj.GenerateResource.Cache
 D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.exe
 D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.pdb
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.csprojResolveAssemblyReference.cache
+D:\GitHub\C-Code\MoveFile\MoveFile\obj\Release\MoveFile.csproj.CoreCompileInputs.cache

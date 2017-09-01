@@ -30,6 +30,7 @@ namespace MoveFile
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
             tbxInput.Text = inputStr;
             lvwFiles.Columns.Add("文件名", 200);
             lvwFiles.Columns.Add("大小", 100);
@@ -37,26 +38,49 @@ namespace MoveFile
 
             lvwFiles.View = View.Details;
 
-            pbxPhoto.ImageLocation = @"http://localhost:8080/Pictures/LCN_0579-1.jpg";
+            string[] paths = Environment.GetLogicalDrives();
+
+            foreach(string path in paths)
+            {
+                TreeNode node = new TreeNode();
+                node.Text = path;
+                tvwDirectories.Nodes.Add(node);
+
+                DirectoryInfo info =new DirectoryInfo(path);
+
+                DirectoryInfo[] infos = info.GetDirectories();
+                foreach(DirectoryInfo item in infos)
+                {
+                    node.Nodes.Add(new TreeNode(item.Name));
+                }
+               
+
+            }
+
+            
+            
+            
+
 
         }
 
         private void btnInput_Click(object sender, EventArgs e)
         {
-            pbxPhoto.ImageLocation = tbxInput.Text;
+          
 
-            //if (!"".Equals(inputStr))
-            //{
-            //    fbdDirectory.SelectedPath = inputStr;
-            //}
-            //fbdDirectory.Description = "请选择一个输入文件夹";
-            //fbdDirectory.ShowNewFolderButton = false;
-            //if (fbdDirectory.ShowDialog() == DialogResult.OK)
-            //{
-            //    inputStr = fbdDirectory.SelectedPath;
-            //    tbxInput.Text = fbdDirectory.SelectedPath;
-            //    openInput();
-            //}
+            if (!"".Equals(inputStr))
+            {
+                fbdDirectory.SelectedPath = inputStr;
+            }
+            fbdDirectory.Description = "请选择一个输入文件夹";
+            fbdDirectory.ShowNewFolderButton = false;
+            if (fbdDirectory.ShowDialog() == DialogResult.OK)
+            {
+                inputStr = fbdDirectory.SelectedPath;
+                tbxInput.Text = fbdDirectory.SelectedPath;
+                openInput();
+                
+            }
 
 
 
@@ -76,7 +100,7 @@ namespace MoveFile
                 outputStr = fbdDirectory.SelectedPath;
                 tbxOutput.Text = fbdDirectory.SelectedPath;
 
-
+                  
 
 
 
@@ -90,6 +114,8 @@ namespace MoveFile
         private void openInput()
         {
 
+
+            lvwFiles.BeginUpdate();//数据更新，UI暂时挂起，直到EndUpdate绘制控件，可以有效避免闪烁并大大提高加载速度
 
             DirectoryInfo TheFolder = new DirectoryInfo(inputStr);
             Console.WriteLine(TheFolder.GetFiles().Length);
@@ -111,6 +137,7 @@ namespace MoveFile
 
             }
 
+            lvwFiles.EndUpdate();//结束数据处理，UI界面一次性绘制。
 
 
         }
@@ -167,5 +194,6 @@ namespace MoveFile
         {
             System.Diagnostics.Process.Start(pbxPhoto.ImageLocation);
         }
+
     }
 }
